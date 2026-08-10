@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Chiara Germelli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #bbccdd;
+    --ink: #32373b;
+    --ink-soft: #32373b;
+    --accent: #a82323;
+    --line: #32373b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  header p {
+    margin-top: 1.25rem;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 2px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  .btn-secondary {
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  .viewer-frame {
+    max-width: 900px;
+    margin: 0 auto 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .mount {
+    position: relative;
+    border: 1px solid var(--line);
+    background: #fafaf9;
+    padding: 2.5rem 2.5rem 3rem;
+  }
+
+  .mount::before,
+  .mount::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--accent);
+  }
+
+  .mount::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .mount::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .mount .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    display: block;
+    box-shadow: 0 20px 40px -20px rgba(22, 32, 29, 0.25);
+  }
+
+  .fallback {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--ink-soft);
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  footer a { color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .mount { padding: 1.5rem 1.25rem 2rem; }
+    iframe { height: 70vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Portfolio</div>
+  <h1>Chiara Germelli</h1>
+  <p>Browse the portfolio below or download it as a PDF.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="ENGPortfolioChiaraGermelli.pdf" download>Download PDF</a>
+    <a class="btn btn-secondary" href="mailto:cchiaragermelli@gmail.com">Contact me</a>
+  </div>
+</header>
+
+<div class="viewer-frame">
+  <div class="mount">
+    <div class="label">Preview</div>
+    <iframe src="ENGPortfolioChiaraGermelli.pdf#toolbar=0&amp;navpanes=0" title="Portfolio PDF preview">
+      <div class="fallback">
+        Your browser does not support the preview. <a href="ENGPortfolioChiaraGermelli.pdf">Open PDF</a>.
+      </div>
+    </iframe>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Chiara Germelli
+</footer>
+
+</body>
+</html>
